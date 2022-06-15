@@ -1,0 +1,28 @@
+@import "./_variable.scss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ffffff;
+    font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a{
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+

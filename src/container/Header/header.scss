@@ -1,0 +1,25 @@
+@import "../../style/_variable.scss";
+@import "../../style/mixin.scss";
+
+.land_header_contener{
+    @include section_padding();
+    background: url('../../assets/header_bg.png');
+    background-size: 60% 100%;
+    background-repeat: no-repeat;
+    .land_header_contener_section{
+       @include display(space-between, center);
+       @media screen and (max-width:932px) {
+            flex-direction: column;
+       }
+       .land_header_contener_section_left{
+            flex: 1;
+       }
+       .land_header_contener_section_right{
+            flex: 1;
+           
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

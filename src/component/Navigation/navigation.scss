@@ -1,0 +1,123 @@
+@import "../../style/_variable.scss";
+@import "../../style/mixin.scss";
+
+
+.nav_section{
+    @include display(space-between);
+    .nav_logo_area{
+        flex: .7;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100%;
+        h5{
+            font-size: $font_size_24;
+            font-weight: $font-weight_700;
+            line-height: 51px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+    .nav_content{
+        flex: 1.5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 930px){
+            justify-content: flex-end;
+            margin-top: .7rem;
+        }
+        .nav_links{
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+
+            @media screen and (max-width: 930px){
+                display: none;
+            }
+            ul{
+                display: flex;
+                li{
+                    margin-right: 2rem;
+                    a{
+                        @include display(flex-start, center);
+                        text-transform: capitalize;
+                        @include font($font_size_16, $font-weight_500, $line_height_20, $primary_font_color_1);
+                    }
+                }
+            }
+        }
+        .nav_buttons_area{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            @media screen and (max-width: 930px){
+                display: none;
+            }
+            .nav_button_sign_in{
+                margin-right: 1.5rem;
+                text-transform: capitalize;
+                @include font($font_size_16, $font-weight_500, $line_height_20, $primary_font_color_1);
+            }
+            .nav_button_free{
+                @include buttonStyle;
+            }
+        }
+        // nav menu
+        .nav_menu_container{
+            position: relative;
+            @include display(flex-end,center);
+            display: none;
+            @media screen and (max-width: 930px){
+                display: block;
+            }
+            svg{
+                @include font(25px, 500, 30px, $primary_font_color_1);
+                cursor: pointer;
+            }
+            .nav_menu_content{
+                position: absolute;
+                top: 2rem;
+                right: 0rem;
+                @include display(center, flex-start, column);
+                width: 150px;
+                background: #ffff;
+                box-shadow: 1px 1px 4px #ddd;
+                padding: 1rem;
+                border-radius: 5px;
+                .nav_menu_links{
+                    width: 100%;
+                    ul{
+                        @include display(flex-end, flex-end, column);
+                        li{
+                            margin-top: .5rem;
+                            a{
+                                @include display(flex-start, center);
+                                text-transform: capitalize;
+                                @include font($font_size_16, $font-weight_500, $line_height_20, $primary_font_color_1)
+                            }
+                        }
+                    }
+                }
+                .nav_menu_buttons_area{
+                    width: 100%;
+                    @include display(flex-end, flex-end, column);
+                    .nav_button_sign_in{
+                        margin-top: .5rem;
+                        text-transform: capitalize;
+                        @include font($font_size_16, $font-weight_500, $line_height_20, $primary_font_color_1);
+                    }
+                    .nav_button_free{
+                        @include buttonStyle();
+                        padding: .8rem;
+                        margin-top: .5rem;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+

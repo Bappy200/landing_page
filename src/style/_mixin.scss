@@ -1,0 +1,43 @@
+@mixin font($font-size, $weight, $line-height, $color) {
+    font-size: $font-size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+
+@mixin  display($justify-content: flex-start, $align-items: flex-start, $flex-direction: row) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items:  $align-items;
+    flex-direction: $flex-direction;
+}
+
+
+@mixin  buttonStyle($border-radius: 5px) {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: $border-radius;
+    background: #F57059;
+    text-transform: capitalize;
+    @include font(16px, 500, 20px, #fff);
+    
+}
+
+
+@mixin section_padding {
+    padding: 2rem 4rem;
+    @media screen and (max-width: 550px){
+        padding: 2rem;
+    }
+}
+
+@mixin section_margin {
+    margin: 2rem 4rem;
+    @media screen and (max-width: 550px){
+        margin: 2rem
+    }
+}
+
