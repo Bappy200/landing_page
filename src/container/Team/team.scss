@@ -1,0 +1,110 @@
+@import '../../style/mixin';
+@import '../../style/variable';
+
+.land_team_section{
+    @include section_padding();
+    background: url('../../assets/shape.png');
+    background-repeat: no-repeat;
+    background-position: 16% 88%;
+    background-size: 80%;
+    position: relative;
+    .land_team_section_text{
+        max-width: 367px;
+        p{
+            @include font($font_size_14, $font-weight_300, $line_height_18, $secondary_color_1); 
+        }
+       
+        h2{
+            @include font($font_size_40, $font-weight_700, 48px, $primary_font_color_1);
+            text-transform: capitalize;
+            @media screen and (max-width:992px){
+                font-size: $font_size_35;
+                line-height: $line_height_40;
+            }
+            @media screen and (max-width:768px){
+                font-size: $font_size_30;
+                line-height: $line_height_35;
+            }
+            @media screen and (max-width:576px){
+                font-size: $font_size_25;
+                line-height: $line_height_30;
+            }
+        }
+        .p_text{
+            color: $primary_font_color_1;
+        }
+        button{
+            @include buttonStyle();
+            border-radius: 50px;
+            padding: .6rem 2rem;
+            margin-top: .7rem;
+            font-size: 14px;
+        }
+    }
+    .land_team_content{
+        position: relative;
+        @include display(space-between, center);
+        .land_team_item{
+            position: relative;
+            width: 238px;
+            .land_team_item_sqr{
+                margin-bottom: 2rem;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: #C4C4C4;
+                @include display(center, center);
+                .land_team_item_sqr_in{
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background: #ffffff;
+                }
+            }
+            span{
+                @include font(220px, $font-weight_900,125px, #ddd);
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                z-index: -1;
+            }
+            h4{
+                @include font($font_size_16, $font-weight_700, $line_height_20, $primary_font_color_1);
+                text-transform: capitalize;
+                
+            }
+            p{
+                @include font($font_size_16, $font-weight_300, $line_height_20, $primary_font_color_1);
+                @media screen and (max-width:576px){
+                    font-size: $font_size_14;
+                    line-height: $line_height_18;
+                }
+            }
+
+        }
+        .land_team_item:nth-child(1){
+            top: 134px;
+            left: 196px;
+        }
+        
+        .land_team_item:nth-child(2){
+            top: -16px;
+            left: 181px;
+        }
+        .land_team_item:nth-child(3){
+            top: -256px;
+            left: 28px;
+        }
+
+    }
+    .squire_shpe{
+        position: absolute;
+        right: -150px;
+        top: 0%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: $secondary_color_2;
+        z-index: -999;
+    }
+}

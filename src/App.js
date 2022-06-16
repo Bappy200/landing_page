@@ -1,5 +1,6 @@
 import Brand from "./component/Brand/Brand";
 import Header from "./container/Header/Header";
+import Team from "./container/Team/Team";
 import "./style/app.scss"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
         <Header/>
         <Brand/>
+        <Team/>
     </>
    
   );
