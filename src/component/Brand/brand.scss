@@ -1,0 +1,29 @@
+@import '../../style/mixin';
+@import '../../style/variable';
+
+.land_brand{
+    @include section_padding();
+    position: relative;
+    p{
+        text-align: center;
+        @include font($font_size_16, $font-weight_500, $line_height_20, $primary_font_color_1);
+        @media screen and (max-width:576px){
+            font-size: $font_size_14;
+            line-height: $line_height_18;
+        } 
+    }
+    .land_brand_content{
+        @include display(center, center);
+        flex-wrap: wrap;
+        .land_brand_content_item{
+            min-width: 110px;
+      
+            padding: 1rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+
+}
