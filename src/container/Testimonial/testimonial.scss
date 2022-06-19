@@ -1,0 +1,86 @@
+@import "../../style/_variable.scss";
+@import "../../style/_mixin.scss";
+
+.land_testimonial_section{
+    @include section_padding();
+    .land_testimonial_section_heading{
+        @include display(center, center, column);
+        p{
+            @include font($font_size_16, $font-weight_300, $line_height_18, $primary_font_color_1);
+            text-transform: uppercase;
+        }
+        h2{
+            @include font($font_size_45, $font-weight_700, 48px, $primary_font_color_1);
+            margin-bottom: 1.5rem;
+            text-transform: capitalize;
+            @media screen and (max-width:992px){
+                font-size: $font_size_35;
+                line-height: $line_height_40;
+            }
+            @media screen and (max-width:768px){
+                font-size: $font_size_30;
+                line-height: $line_height_35;
+            }
+            @media screen and (max-width:576px){
+                font-size: $font_size_25;
+                line-height: $line_height_30;
+            }
+        }
+    }
+    .land_testimonial_section_slide{
+        @include display(space-between, center);
+        @media screen and (max-width:768px){
+            flex-direction: column;
+        }
+        .land_testimonial_section_slide_image{
+            flex:1;
+            margin-right: 2rem;
+            box-sizing: border-box;
+            @media screen and (max-width:768px){
+                margin-right: 0px;
+                margin-bottom: 1rem;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .land_testimonial_section_slide_info{
+            flex: 1;
+            .testimonial_quote_icon{
+                @include font($font_size_45, $font-weight_700, $line_height_60, $secondary_color_1);
+                margin-bottom: .2rem;
+            }
+            .land_testimonial_section_slide_info_start{
+                @include display(flex-start, center);
+                margin-bottom: 1.4rem;
+                svg{
+                    @include font($font_size_18, $font-weight_500, $line_height_25, $secondary_color_1);
+                }
+            }
+            .land_testimonial_section_slide_info_text{
+                text-align: left;
+                @include font($font_size_16, $font-weight_300, $line_height_20, $primary_font_color_1);
+                margin-bottom: 1rem;
+            }
+            .land_testimonial_section_slide_info_buttom{
+                @include display(space-between, center);
+                div{
+                    @include display(flex-start, flex-start, column);
+                    h4{
+                        text-transform: uppercase;
+                        @include font($font_size_18, $font-weight_500, $line_height_20, $primary_font_color_1); 
+                    } 
+                    p{
+                        text-transform: uppercase;
+                        @include font(14px, $font-weight_300, $line_height_16, $primary_font_color_1);
+                    }
+                }
+                img{
+                    width: 100px;
+                }
+            }
+        }
+        
+    }
+
+}

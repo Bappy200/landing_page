@@ -1,0 +1,32 @@
+@import "../../style/_variable.scss";
+@import "../../style/_mixin.scss";
+.land_offer_promotion_section{
+    @include section_padding();
+    @include display(center, center);
+    @media screen and (max-width:576px){
+        flex-direction: column;
+        margin: .5rem 0rem;
+    }
+    .land_offer_promotion_section_service{
+        padding: 1rem;
+        margin: .6rem;
+        background: #F8F9FD;
+        @include display(center, center, column);
+        
+        h4{
+            @include font($font_size_16, $font-weight_700, $line_height_20, $primary_font_color_1);
+            text-transform: capitalize;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            margin-top: 1rem;
+            @include font($font_size_16, $font-weight_300, $line_height_18, $primary_font_color_1); 
+        }
+        button{
+            @include buttonStyle();
+            padding: .7rem 3rem;
+            margin-top: 1.5rem;
+        }
+    }
+}

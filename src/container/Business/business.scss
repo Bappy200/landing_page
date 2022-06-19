@@ -1,0 +1,138 @@
+@import "../../style/_variable.scss";
+@import "../../style/_mixin.scss";
+
+.land_business_section{
+    @include section_padding();
+    position: relative;
+    margin-top: 15rem;
+    background: url('../../assets/business_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+ 
+    @media screen and (max-width:576px){
+       margin-top: 3rem;
+    }
+    
+    .land_business_section_image{
+        @include display(center, center);
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        @media screen and (max-width:576px){
+            top: 20px;
+        }
+        div{
+            min-width: 650px;
+            height: 300px;
+            background: url('../../assets/teamImg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 20px;
+            padding: 1rem;
+            @include display(center, center, column);
+            @media screen and (max-width:992px){
+                min-width: 500px;
+                height: 280px;
+            }
+            @media screen and (max-width:768px){
+                min-width: 420px;
+                height: 270px;
+            }
+            @media screen and (max-width:576px){
+                min-width: 300px;
+                height: 160px;
+            }
+            h3{
+                @include font(30px, $font-weight_600, 38px, $white);
+                text-transform: capitalize;
+                margin-bottom: .5rem;
+                @media screen and (max-width:576px){
+                    font-size: 28px;
+                    line-height: $line_height_35;
+                }
+            }
+            p{
+                @include font($font_size_14, $font-weight_300, $line_height_18, $white); 
+            }
+        }
+    }
+    .land_business_section_title_text{
+        margin-top: 17rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        h3{
+            @include font($font_size_45, $font-weight_700, 48px, $white);
+            text-transform: capitalize;
+            @media screen and (max-width:992px){
+                font-size: $font_size_35;
+                line-height: $line_height_40;
+            }
+            @media screen and (max-width:768px){
+                font-size: $font_size_30;
+                line-height: $line_height_35;
+            }
+            @media screen and (max-width:576px){
+                font-size: $font_size_25;
+                line-height: $line_height_30;
+            }
+        }
+        p{
+            @include font($font_size_14, $font-weight_300, $line_height_18, $primary_font_color_1); 
+        }
+    }
+    .land_business_section_services{
+        @include display(space-between, center);
+        @media screen and (max-width:768px){
+            flex-direction: column;
+        }
+        
+        .land_business_section_services_item{
+            width: 340px;
+            margin: .5rem;
+            padding: 1.5rem;
+            background: $white;
+            border-radius: 5px;
+            @include display(flex-start, flex-start, column);
+            @media screen and (max-width:768px){
+                width: 100%;
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                margin-bottom: 1.5rem;
+            }
+            h4{
+                @include font(20px, $font-weight_600, 28px, $primary_font_color_1);
+                text-transform: capitalize;
+                margin-bottom: .5rem;
+                @media screen and (max-width:576px){
+                    font-size: 18px;
+                    line-height: $line_height_25;
+                }
+            }
+            p{
+                @include font($font_size_14, $font-weight_300, $line_height_18, $primary_font_color_1); 
+            }
+            a{
+                @include display(flex-start, center);
+                color: #01966B;
+                @include font($font_size_14, $font-weight_300, 15px, #01966B); 
+                margin-top: .5rem;
+                svg{
+                    margin-left: .3rem;
+                    @include font($font_size_14, $font-weight_300, 15px, #01966B); 
+                }
+            }
+        }
+    }
+    .land_business_section_button{
+        @include display(center, center);
+        button{
+            @include buttonStyle();
+            margin-top: 2rem;
+            padding: 1rem 3rem;
+        }
+    }
+}

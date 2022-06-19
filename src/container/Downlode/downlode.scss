@@ -1,0 +1,55 @@
+@import "../../style/_variable.scss";
+@import "../../style/_mixin.scss";
+
+.land_downlode_section{
+    @include section_padding();
+    @include display(center, center);
+    background: url('../../assets/downlode_bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    .land_downlode_content{
+        @include display(center, center, column);
+        max-width: 550px;
+        .land_downlode_content_title{
+            @include font($font_size_16, $font-weight_300, $line_height_18, $primary_font_color_1);
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h2{
+            @include font($font_size_45, $font-weight_700, 48px, $primary_font_color_1);
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+            @media screen and (max-width:992px){
+                font-size: $font_size_35;
+                line-height: $line_height_40;
+            }
+            @media screen and (max-width:768px){
+                font-size: $font_size_30;
+                line-height: $line_height_35;
+            }
+            @media screen and (max-width:576px){
+                font-size: $font_size_25;
+                line-height: $line_height_30;
+            }
+        }
+        p{
+            @include font($font_size_16, $font-weight_300, $line_height_18, $primary_font_color_1);
+            text-align: center;
+        }
+        .land_downlode_content_button{
+            margin-top: 1.5rem;
+            @include display(center, center);
+            @media screen and (max-width:576px){
+                flex-direction: column;
+            }
+            button{
+                @include buttonStyle();
+                margin: .5rem;
+                padding: 1rem 2rem;
+                width: 200px;
+                
+            }
+        }
+    }
+}
