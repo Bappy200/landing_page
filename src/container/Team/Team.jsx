@@ -1,6 +1,5 @@
 import React from 'react'
 import './team.scss';
-import teamImg from '../../assets/teamImg.png'
 function Team() {
   return (
     <div className='land_team_section'>
