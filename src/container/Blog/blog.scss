@@ -1,0 +1,93 @@
+@import "../../style/_variable.scss";
+@import "../../style/_mixin.scss";
+
+.land_blog_section{
+    @include section_padding();
+    .land_blog_section_title{
+        @include display(space-between, center);
+        margin-bottom: 1rem;
+        h2{
+            @include font($font_size_45, $font-weight_700, 48px, $primary_font_color_1);
+            text-align: left;
+            text-transform: uppercase;
+            @media screen and (max-width:992px){
+                font-size: $font_size_35;
+                line-height: $line_height_40;
+            }
+            @media screen and (max-width:768px){
+                font-size: $font_size_30;
+                line-height: $line_height_35;
+            }
+            @media screen and (max-width:576px){
+                font-size: $font_size_18;
+                line-height: $line_height_25;
+                
+            }
+        }
+        button{
+            @include buttonStyle();
+            padding: 1rem 2rem;
+            @media screen and (max-width: 576px) {
+                padding: .5rem 1rem;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+    .land_blog_section_content{
+        @include display(flex-start, flex-start);
+        margin-top: 2rem;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        .land_blog_section_content_left{
+            flex: 2;
+            @include display(space-between, flex-start);
+            margin-right: 1.5rem;
+            gap: 1.5rem;
+            
+            @media screen and (max-width: 576px) {
+                flex-direction: column;
+                margin: 1rem 0rem;  
+            }
+        }
+        .land_blog_section_content_right{
+            width: 100%;
+            flex: 1;
+            @include display(space-between, center, column);
+            .post_item{
+                flex-direction: row;
+                border-bottom: 1px solid #DEE1E6;
+                margin-bottom: 1rem;
+                padding: .5rem 0rem;
+              
+                .post_item_img{
+                    flex: 1;
+                    margin-right: .5rem;
+                }
+                .post_item_info{
+                    flex: 2;
+                    @media screen and (max-width:768px){
+                        margin-top: .5rem;
+                    }
+                    .post_item_date_info{
+                        margin: 0rem;
+                        p{
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+                h4{
+                    margin:.3rem 0rem 0rem 0rem;
+                    @media screen and (max-width:992px){
+                        margin: 0rem;
+                        font-size: $font_size_14;
+                        line-height: $line_height_16;
+                    }
+                }
+            }
+        }
+
+    }
+}

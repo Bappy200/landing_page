@@ -2,12 +2,13 @@
 @import "../../style/_mixin.scss";
 
 .land_header_contener{
-    @include section_padding();
+    
     background: url('../../assets/header_bg.png');
     background-size: 60% 100%;
     background-repeat: no-repeat;
     box-sizing: border-box;
     .land_header_contener_section{
+        @include section_padding();
        @include display(space-between, center);
        @media screen and (max-width:768px){
            flex-direction: column;     

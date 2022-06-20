@@ -1,0 +1,44 @@
+@import "../../style/_variable.scss";
+@import "../../style/_mixin.scss";
+
+.post_item{
+    width: 100%;
+    height: 100%;
+    @include display(flex-start, flex-start, column);
+    box-sizing: border-box;
+    .post_item_img{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .post_item_info{
+        box-sizing: border-box;
+        flex: 1;
+        .post_item_date_info{
+            @include display(flex-start, flex-start); 
+            margin-top: .5rem;
+            p{
+                text-transform: uppercase;
+                margin-right: .5rem;
+                @include font($font_size_14, $font-weight_300, $line_height_18, $primary_font_color_1);
+            } 
+        }
+        h4{
+            @include font(20px, $font-weight_600, 28px, $primary_font_color_1);
+            text-transform: capitalize;
+            margin:1rem 0rem;
+            @media screen and (max-width:992px){
+                font-size: 15px;
+                line-height: $line_height_18;
+            }
+        }
+        p{
+            margin-right: .5rem;
+            @include font($font_size_14, $font-weight_300, $line_height_18, $primary_font_color_1);
+        }
+    }
+
+}

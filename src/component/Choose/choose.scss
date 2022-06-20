@@ -1,0 +1,72 @@
+@import "../../style/_variable.scss";
+@import "../../style/_mixin.scss";
+
+.land_choose_section{
+    @include section_padding();
+    background: #05796B;
+    @include display(space-around, center);
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+    .land_choose_section_left{
+        flex: 1;
+        @include display(flex-end, flex-start, column);
+        width: 100%;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 1rem;
+        }
+        p{
+            text-transform: uppercase;
+            @include font($font_size_14, $font-weight_300, $line_height_18, $white);
+        }
+        h2{
+          
+            @include font(20px, $font-weight_700, 28px, $white);
+            text-transform: capitalize;
+            margin:1rem 0rem;
+            @media screen and (max-width:992px){
+                font-size: 16px;
+                line-height: $line_height_18;
+            }
+        }
+        .land_choose_section_left_text{
+           text-transform: capitalize;
+        }
+    }
+    .land_choose_section_right{
+        flex: 1;
+
+        @include display(flex-end, center, column);
+        width: 100%;
+        form{
+            width: 100%;
+            .land_choose_section_right_input_fild{
+                width: 100%;
+                input{
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    margin-bottom: .5rem;
+                    padding: 1rem;
+                    @include font($font_size_16, $font-weight_300, $line_height_18, $primary_font_color_1);
+
+                }
+            }
+            .land_choose_section_right_submit{
+                width: 100%;
+                input{
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    padding: 1rem;
+                    text-transform: uppercase;
+                    background: $secondary_color_1;
+                    cursor: pointer;
+                    @include font($font_size_16, $font-weight_500, $line_height_18, $white);
+                }
+            }
+                
+        }
+    }
+}
