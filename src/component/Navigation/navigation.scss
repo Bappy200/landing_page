@@ -4,7 +4,6 @@
 
 .nav_section{
     @include display(space-between);
-    @include section_padding();
     .nav_logo_area{
         flex: .7;
         display: flex;

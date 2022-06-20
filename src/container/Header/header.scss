@@ -2,19 +2,20 @@
 @import "../../style/_mixin.scss";
 
 .land_header_contener{
-    
+    @include section_padding();
     background: url('../../assets/header_bg.png');
     background-size: 60% 100%;
     background-repeat: no-repeat;
     box-sizing: border-box;
     .land_header_contener_section{
-        @include section_padding();
        @include display(space-between, center);
+       width: 100%;
        @media screen and (max-width:768px){
            flex-direction: column;     
         }
        .land_header_contener_section_left{
             flex: 1;
+            width: 100%;
             margin-top: 2rem;
             @include display(center, flex-start, column);
             @media screen and (max-width:992px){
@@ -23,9 +24,7 @@
             @media screen and (max-width:768px){
                 
             }
-            @media screen and (max-width:576px){
-                
-            }
+           
             p{
                 @include font($font_size_16, $font-weight_300, $line_height_20, $primary_font_color_1);
                 @media screen and (max-width:576px){
@@ -65,23 +64,40 @@
                     @include display(flex-start, flex-start, column);
                     label{
                         @include font(13px,$font-weight_300, $line_height_16, $primary_font_color_1);
+                        @media screen and (max-width:576px){
+                            font-size: 10px;
+                            line-height: 18px;
+                        }
                     }
                     input{
                         outline: none;
                         border: none;
                         @include font($font_size_18, $font-weight_500, $line_height_25, $primary_font_color_1);
-                        
+                        @media screen and (max-width:576px){
+                            font-size: 15px;
+                            line-height: 22px;
+                        }
                         &::placeholder{
                             @include font($font_size_18, $font-weight_500, $line_height_25, $primary_font_color_1);
+                            @media screen and (max-width:576px){
+                                font-size: 15px;
+                                line-height: 22px;
+                            }
                         }
                     }
 
                 }
                 button{
-                    flex: .2;
+                    flex: .3;
+                    width: 100%;
                     @include buttonStyle(); 
                     border-radius: 0px;  
-                    background: $primary_font_color_1;                 
+                    background: $primary_font_color_1;
+                    @media screen and (max-width:576px){
+                        padding: 1rem;
+                        font-size: 13px;
+                        flex: .6;
+                    }                 
                 }
 
             }
